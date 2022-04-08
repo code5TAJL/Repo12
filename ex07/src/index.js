@@ -3,7 +3,7 @@ var collection = {
         album: "Slippery When Wet",
         artist: "Bon Jovi",
         tracks: [
-            "Let it Rock",
+            "Let It Rock",
             "You Give Love a Bad Name"
         ]
     },
@@ -24,7 +24,7 @@ var collection = {
     }
 };
 
-// Keep a copy of the collection for tests
+// Keep a copy of the collection for test
 var oldCollection = JSON.parse(JSON.stringify(collection));
 
 function updateRecords(object, id, prop, value) {

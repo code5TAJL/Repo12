@@ -1,4 +1,4 @@
-// Only change code below this line
+// Only change code below this 
 function sumFibonacci(num) {
     var fib0 = 0;
     var fib1 = 1;
@@ -7,19 +7,21 @@ function sumFibonacci(num) {
     while (fibonacciArray <= num) {
         if (fibonacciArray % 2) {
             sum = sum + fib1;
+            
         }
         fibonacciArray = fib0 + fib1;
         fib1 = fib1 +fib0;
         fib0 = fib1 - fib0;
+
     }
-    return sum;
+    return sum
 }
 // Only change code above this line
 
-console.log(sumFibonacci(1)); // Change this line
+console.log(sumFibonacci(1));  // Change this line
 console.log(sumFibonacci(10));
 console.log(sumFibonacci(20));
 console.log(sumFibonacci(4));
-console.log(sumFibonacci(-5));
+console.log(sumFibonacci(-5));  
 module.exports = sumFibonacci;
 
