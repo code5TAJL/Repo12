@@ -29,9 +29,23 @@ var oldCollection = JSON.parse(JSON.stringify(collection));
 
 function updateRecords(object, id, prop, value) {
     // Only change code below this line
-
+    if (prop === "tracks" && !collection[id].hasOwnProperty([prop])) {
+        collection[id][prop] = [];
+        collection[id][prop].push(value);
+    } else if (prop === "tracks" && collection[id].hasOwnProperty([prop])) {
+        collection[id][prop].push(value);
+    } else {
+        collection[id][prop] = value;
+    }
+    if(!value) {
+        delete collection[id][prop];
+    }
+    return collection;
     // Only change code above this line
 }
 
-console.log(updateRecords(collection, id, prop, value)); // Change this line
+console.log(updateRecords(collection, 5439, "artist", "ABBA")); // Change this line
+console.log(updateRecords(collection, 5439, "tracks", "Take a Chance on Me"));
+console.log(updateRecords(collection, 2548, "artist", ""));
+console.log(updateRecords(collection, 1245, "tracks", "Addicted to Love"));
 module.exports = updateRecords;
